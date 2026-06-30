@@ -1,12 +1,18 @@
 package David.gestion.de.tareas.model;
 
+public enum Prioridad {
+    Baja,
+    Media,
+    Alta,
+    Urgente;
+}
+
 public class Tarea {
     private String nombreTarea;
-    private int prioridad;
+    private Prioridad prioridad;
     private EstadoDeTarea estado;
 
-
-    public Tarea(String nombreTarea, int prioridad, EstadoDeTarea estado){
+    public Tarea(String nombreTarea, Prioridad prioridad, EstadoDeTarea estado){
         this.nombreTarea = nombreTarea;
         this.prioridad = prioridad;
         this.estado = estado;
@@ -19,10 +25,10 @@ public class Tarea {
         this.nombreTarea= nombreTarea;
     }
 
-    public int getPrioridad(){
+    public Prioridad getPrioridad(){
         return prioridad;
     }
-    public void setPrioridad(int prioridad){
+    public void setPrioridad(Prioridad prioridad){
         this.prioridad = prioridad;
     }
 
