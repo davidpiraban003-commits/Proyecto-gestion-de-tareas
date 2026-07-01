@@ -1,21 +1,18 @@
 package David.gestion.de.tareas.model;
 
-public enum Prioridad {
-    Baja,
-    Media,
-    Alta,
-    Urgente;
-}
+import jakarta.persistence.Id;
 
 public class Tarea {
     private String nombreTarea;
     private Prioridad prioridad;
     private EstadoDeTarea estado;
+    private int IdTarea;
 
-    public Tarea(String nombreTarea, Prioridad prioridad, EstadoDeTarea estado){
+    public Tarea(String nombreTarea, Prioridad prioridad, EstadoDeTarea estado, int IdTarea){
         this.nombreTarea = nombreTarea;
         this.prioridad = prioridad;
         this.estado = estado;
+        this.IdTarea = IdTarea;
     }
 
     public String getNombreTarea(){
@@ -25,7 +22,7 @@ public class Tarea {
         this.nombreTarea= nombreTarea;
     }
 
-    public Prioridad getPrioridad(){
+    public  Prioridad getPrioridad(){
         return prioridad;
     }
     public void setPrioridad(Prioridad prioridad){
@@ -38,4 +35,11 @@ public class Tarea {
     public void setEstado(EstadoDeTarea estado){
         this.estado = estado;
     }
+    public int getIdTarea(){
+        return IdTarea;
+    }
+    public void setIdTarea(int IdTarea){
+        this.IdTarea = IdTarea;
+    }
+}
 }

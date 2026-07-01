@@ -1,6 +1,6 @@
 package David.gestion.de.tareas.repository;
 import org.springframework.stereotype.Repository;
-import David.gestion.de.tareas.model.Tarea; 
+import David.gestion.de.tareas.model.*; 
 import java.util.ArrayList;
 import java.util.List;
 
