@@ -1,6 +1,15 @@
 package David.gestion.de.tareas.model;
 
 import jakarta.persistence.Id;
+import jakarta.persistence.Entity;
+
+
+public enum Prioridad {
+    Baja,
+    Media,
+    Alta,
+    Urgente;
+
 
 public class Tarea {
     private String nombreTarea;
